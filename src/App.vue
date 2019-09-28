@@ -1,22 +1,32 @@
 <template>
   <div id="app">
     <div class="style1">
-      <img width="25%" src="./assets/logo.png">
-      <pack1 msg="Hello Vue in CodeSandbox!"/>
+      <img width="50%" src="./assets/logo-0.png">
+      <pack1/>
+      <pack2/>
     </div>
   </div>
 </template>
 
 <script>
 import pack1 from "./components/main";
-
+import pack2 from "./components/camera";
 export default {
   name: "App",
   components: {
-    pack1
+    pack1,
+    pack2
+  },
+  mounted() {
+    let camScript = document.createElement("script");
+    camScript.setAttribute("src", "./components/camera.js");
+    document.head.appendChild(camScript);
   }
 };
 </script>
+
+
+
 
 <style>
 #app {

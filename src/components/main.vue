@@ -1,74 +1,29 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <h3>Installed CLI Plugins 123</h3>
-    <ul>
-      <li>
-        <a
-          href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel"
-          target="_blank"
-          rel="noopener"
-        >babel</a>
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint"
-          target="_blank"
-          rel="noopener"
-        >eslint</a>
-      </li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li>
-        <a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a>
-      </li>
-      <li>
-        <a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a>
-      </li>
-      <li>
-        <a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a>
-      </li>
-      <li>
-        <a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a>
-      </li>
-      <li>
-        <a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a>
-      </li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li>
-        <a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a>
-      </li>
-      <li>
-        <a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a>
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/vue-devtools#vue-devtools"
-          target="_blank"
-          rel="noopener"
-        >vue-devtools</a>
-      </li>
-      <li>
-        <a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a>
-      </li>
-      <li>
-        <a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a>
-      </li>
-    </ul>
+    <div class="main">
+      <div class="left">
+        <!-- Левый блок -->
+        <div class="block">
+          <p>ФИО</p>
+        </div>
+        <div class="block">
+          <p>Компания</p>
+        </div>
+        <div class="block">
+          <p>Адрес</p>
+        </div>
+      </div>
+
+      <div class="right">
+        <!-- Правый -->
+        <div class="block2"></div>
+
+        <div class="button"></div>
+      </div>
+    </div>
   </div>
 </template>
 
-<script>
-export default {
-  name: "HelloWorld",
-  props: {
-    msg: String
-  }
-};
-</script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
@@ -85,5 +40,123 @@ li {
 }
 a {
   color: #42b983;
+}
+
+* {
+  margin: 0;
+}
+
+.top {
+  position: absolute;
+  width: 100%;
+  height: 20%;
+  background: #2F4F4F;
+}
+
+.block {
+  background: #D3D3D3;
+  position: inherit;
+  height: 10%;
+  margin: 4%;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.block p {
+  position: relative;
+  font-size: 2em;
+  text-align: center;
+}
+
+.main {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.left {
+  width: 40%;
+  height: 100%;
+  position: relative;
+  margin: 2%;
+  display: inline-block;
+  vertical-align: top;
+  background: #778899;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.right {
+  height: 100%;
+  position: inherit;
+  width: 40%;
+  margin: 2%;
+  display: inline-block;
+  background: #778899;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.menu {
+  margin-left: 90%;
+  width: 11%;
+  height: 100%;
+  position: inherit;
+  background: #2F4F4F;
+}
+
+.block2 {
+  position: relative;
+  margin: 4%;
+  background: #D3D3D3;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.button {
+  position: relative;
+  width: 35%;
+  margin: 4%;
+  background: #D3D3D3;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.stat {
+  background: #D3D3D3;
+  position: relative;
+  left: 10%;
+  width: 80%;
+  height: 12%;
+  margin-top: 8%;
+}
+
+.stat h1 {
+  text-align: center;
+  position: inherit;
+  font-size: 2em;
+  top: 22%;
+}
+
+.description {
+  position: relative;
+  margin-top: 8%;
+  width: 80%;
+  min-height: 40%;
+  background: #D3D3D3;
+  margin-left: 10%;
+}
+
+.description p {
+  font-size: 1.2em;
+}
+
+.description2 {
+  position: relative;
+  margin-top: 8%;
+  width: 75%;
+  min-height: 40%;
+  background: #D3D3D3;
+  margin-left: 12%;
 }
 </style>
